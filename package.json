@@ -1,0 +1,22 @@
+{
+  "name": "readlater-pro",
+  "version": "1.0.0",
+  "description": "Browser extension for saving articles and tracking reading progress",
+  "private": true,
+  "scripts": {
+    "install:all": "npm install && cd extension && npm install && cd ../backend && npm install",
+    "dev:backend": "cd backend && npm run dev",
+    "test:backend": "cd backend && npm test",
+    "test:extension": "cd extension && npm test",
+    "generate-icons": "cd extension && npm run generate-icons",
+    "build:extension": "cd extension && zip -r ../readlater-pro-extension.zip . -x \"node_modules/*\" \"tests/*\" \"package.json\" \"package-lock.json\""
+  },
+  "keywords": [
+    "browser-extension",
+    "chrome-extension",
+    "readlater",
+    "reading-list"
+  ],
+  "author": "Chirag Singhal",
+  "license": "MIT"
+}

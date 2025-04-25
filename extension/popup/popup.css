@@ -1,0 +1,214 @@
+/* Base Styles */
+:root {
+  --primary-color: #4a6ee0;
+  --primary-hover: #3a5ecc;
+  --secondary-color: #f5f7ff;
+  --text-color: #333;
+  --light-text: #666;
+  --border-color: #e0e0e0;
+  --success-color: #4caf50;
+  --error-color: #f44336;
+  --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-family);
+  color: var(--text-color);
+  width: 350px;
+  min-height: 400px;
+  overflow-x: hidden;
+}
+
+.container {
+  padding: 16px;
+}
+
+.hidden {
+  display: none !important;
+}
+
+/* Header */
+header {
+  margin-bottom: 16px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--border-color);
+}
+
+h1 {
+  font-size: 20px;
+  color: var(--primary-color);
+}
+
+h2 {
+  font-size: 16px;
+  margin-bottom: 12px;
+}
+
+h3 {
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+
+/* Sections */
+.section {
+  margin-bottom: 20px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.section:last-child {
+  border-bottom: none;
+}
+
+/* Buttons */
+button {
+  cursor: pointer;
+  padding: 8px 16px;
+  border-radius: 4px;
+  font-family: var(--font-family);
+  font-size: 14px;
+  transition: background-color 0.2s;
+}
+
+.primary-btn {
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  width: 100%;
+}
+
+.primary-btn:hover {
+  background-color: var(--primary-hover);
+}
+
+.secondary-btn {
+  background-color: var(--secondary-color);
+  color: var(--text-color);
+  border: 1px solid var(--border-color);
+}
+
+.secondary-btn:hover {
+  background-color: #e8ecff;
+}
+
+/* Auth Section */
+.auth-state {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+#user-email {
+  font-weight: bold;
+}
+
+/* Save Section */
+#save-controls {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+#save-status {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--success-color);
+}
+
+.article-meta {
+  display: flex;
+  gap: 16px;
+  font-size: 12px;
+  color: var(--light-text);
+  margin-bottom: 12px;
+}
+
+.tags-container {
+  margin-top: 12px;
+}
+
+#tag-input {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  font-family: var(--font-family);
+  font-size: 14px;
+}
+
+#tags-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.tag {
+  background-color: var(--secondary-color);
+  padding: 4px 8px;
+  border-radius: 12px;
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.tag-remove {
+  cursor: pointer;
+  font-weight: bold;
+}
+
+/* Reading List Section */
+#recent-articles {
+  margin-bottom: 16px;
+}
+
+.article-item {
+  padding: 12px;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  margin-bottom: 8px;
+}
+
+.article-item h4 {
+  font-size: 14px;
+  margin-bottom: 4px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.article-item-meta {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  color: var(--light-text);
+}
+
+.progress-bar {
+  height: 4px;
+  background-color: #eee;
+  border-radius: 2px;
+  margin-top: 8px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  background-color: var(--primary-color);
+  width: 0%;
+}
+
+.loading {
+  text-align: center;
+  padding: 16px;
+  color: var(--light-text);
+}

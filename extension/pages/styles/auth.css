@@ -1,0 +1,66 @@
+/* Auth Page Styles */
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  max-width: 500px;
+}
+
+main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#clerk-auth {
+  width: 100%;
+  min-height: 400px;
+}
+
+/* Clerk Customization */
+:root {
+  --clerk-primary: var(--primary-color);
+  --clerk-primary-hover: var(--primary-hover);
+}
+
+/* Custom styles for Clerk elements */
+.cl-rootBox {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.cl-card {
+  box-shadow: var(--shadow) !important;
+  border-radius: 8px !important;
+}
+
+.cl-button-primary {
+  background-color: var(--primary-color) !important;
+}
+
+.cl-button-primary:hover {
+  background-color: var(--primary-hover) !important;
+}
+
+.cl-socialButtonsIconButton {
+  border-color: var(--border-color) !important;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .container {
+    padding: 16px;
+  }
+  
+  #clerk-auth {
+    min-height: 350px;
+  }
+}

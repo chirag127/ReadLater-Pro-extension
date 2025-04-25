@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ReadLater Pro - Notes</title>
+  <link rel="stylesheet" href="styles/common.css">
+  <link rel="stylesheet" href="styles/notes.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="logo">
+        <img src="../assets/icon48.png" alt="ReadLater Pro Logo">
+        <h1>ReadLater Pro</h1>
+      </div>
+      <p class="subtitle">Article Notes</p>
+    </header>
+    
+    <div class="article-info card">
+      <h2 id="article-title">Loading article...</h2>
+      <div class="article-meta">
+        <span id="article-domain"></span>
+        <span id="article-date"></span>
+      </div>
+      <div class="article-actions">
+        <button id="open-article-btn" class="primary-btn">Open Article</button>
+        <button id="back-to-list-btn" class="secondary-btn">Back to Reading List</button>
+      </div>
+    </div>
+    
+    <main>
+      <div class="notes-header">
+        <h2>Notes</h2>
+        <button id="add-note-btn" class="primary-btn">Add Note</button>
+      </div>
+      
+      <div id="notes-container">
+        <div id="loading" class="loading">
+          <div class="spinner"></div>
+          <p>Loading notes...</p>
+        </div>
+        
+        <div id="empty-state" class="empty-state hidden">
+          <img src="../assets/empty-list.svg" alt="No Notes" class="empty-icon">
+          <h3>No notes yet</h3>
+          <p>Add notes to this article to keep track of your thoughts.</p>
+        </div>
+        
+        <div id="notes-list" class="notes-list hidden"></div>
+      </div>
+      
+      <div class="highlights-header">
+        <h2>Highlights</h2>
+      </div>
+      
+      <div id="highlights-container">
+        <div id="highlights-loading" class="loading">
+          <div class="spinner"></div>
+          <p>Loading highlights...</p>
+        </div>
+        
+        <div id="highlights-empty" class="empty-state hidden">
+          <h3>No highlights yet</h3>
+          <p>Highlight text while reading to save important passages.</p>
+        </div>
+        
+        <div id="highlights-list" class="highlights-list hidden"></div>
+      </div>
+    </main>
+    
+    <div id="note-modal" class="modal hidden">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h3>Add Note</h3>
+          <button id="close-modal-btn" class="close-btn">&times;</button>
+        </div>
+        <div class="modal-body">
+          <textarea id="note-text" placeholder="Enter your note..."></textarea>
+        </div>
+        <div class="modal-footer">
+          <button id="cancel-note-btn" class="secondary-btn">Cancel</button>
+          <button id="save-note-btn" class="primary-btn">Save Note</button>
+        </div>
+      </div>
+    </div>
+    
+    <footer>
+      <p>&copy; 2025 ReadLater Pro. All rights reserved.</p>
+    </footer>
+  </div>
+  
+  <script src="scripts/notes.js"></script>
+</body>
+</html>

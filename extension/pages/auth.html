@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ReadLater Pro - Authentication</title>
+  <link rel="stylesheet" href="styles/common.css">
+  <link rel="stylesheet" href="styles/auth.css">
+  <script src="https://clerk.browser.readlaterpro.com/v1/clerk.js"></script>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="logo">
+        <img src="../assets/icon48.png" alt="ReadLater Pro Logo">
+        <h1>ReadLater Pro</h1>
+      </div>
+      <p class="subtitle">Sign in to sync your reading list across devices</p>
+    </header>
+    
+    <main>
+      <div id="clerk-auth"></div>
+      <div id="loading" class="loading">
+        <div class="spinner"></div>
+        <p>Loading authentication...</p>
+      </div>
+    </main>
+    
+    <footer>
+      <p>By signing in, you agree to our <a href="#" target="_blank">Terms of Service</a> and <a href="#" target="_blank">Privacy Policy</a>.</p>
+    </footer>
+  </div>
+  
+  <script src="scripts/auth.js"></script>
+</body>
+</html>

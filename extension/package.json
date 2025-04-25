@@ -1,0 +1,16 @@
+{
+  "name": "readlater-pro-extension",
+  "version": "1.0.0",
+  "description": "Chrome extension for saving articles and tracking reading progress",
+  "private": true,
+  "scripts": {
+    "generate-icons": "node assets/icon-generator.js",
+    "test": "jest"
+  },
+  "dependencies": {
+    "sharp": "^0.32.1"
+  },
+  "devDependencies": {
+    "jest": "^29.5.0"
+  }
+}
